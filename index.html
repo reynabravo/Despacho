@@ -1,0 +1,328 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="file:///C|/Program%20Files/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="file:///C|/Program%20Files/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="file:///C|/Program%20Files/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<script language="javascript">
+var nombre, mayu, ancho, el;//declaramiento de variables 
+function lol(){//nombramiento de funcion 
+	nombre=document.getElementById("txtnombre").value;//extracion de cuandro de texto
+	ancho=nombre.length;
+	mayu=nombre.toUpperCase();//se saca una ocurrencia de la cadena 
+	document.getElementById("txtnombre").value=mayu;
+	nombre=document.getElementById("txtnombre").value;
+	for (x=0; x<=ancho-1; x++)//si x es igual ha cero 
+	{
+		el=nombre.charAt(x);
+	if((el>='A' && el<='Z') || (el==" "))
+	{
+	} 
+else
+	 {
+		alert("Caracteres incorrectos solo introduce letras");
+		break;
+	}
+	}
+}
+
+
+var mail, ancho1, joya, ll, apu, al, lr;//declaramiento de variable
+function email(){//nombre de la funcion
+mail=document.getElementById("mail").value;//mado ha extreaer mi cuadro de texto email
+ancho1=mail.length;
+for(joya=0; joya<=ancho1-1; joya++)
+ {
+	if(((mail.charAt(0)>='0')&&(mail.charAt(0)<='9'))||(mail.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+		break;}
+	else
+	{
+		ll=mail.indexOf('@');
+		apu=mail.lastIndexOf('@');
+		if(ll!=apu){
+			alert("Solo introduce un @");
+			break;
+		}
+		else{
+			if((ll==-1)&&(apu==-1))
+			{
+			alert("Introduce un @");	
+			break;
+				}
+				else{
+					al=mail.indexOf('.');
+					up1=mail.lastIndexOf('.');
+	          if(al!=lr)
+			  {
+				  alert("Solo introduce un punto");
+				  break;
+			  }
+			  else{
+				  if((al==-1)&&(lr==-1)){
+					  alert("Introduce un punto");
+					  break;
+					  }
+			  }
+					}
+			}
+	}		
+ }
+}	
+function Telefono(){//nomdro mi funcion
+	var nume, ancho3, numer;//declaro variables 
+	nume=document.getElementById("txttel").value;
+	ancho3=nume.length;
+	for(x=0; x<=ancho3-1; x++){
+		numer=nume.charAt(x);
+	if(((numer>=0) && (numer<=9 ))|| (numer=='-'))
+	{
+		}
+		else{
+			alert("Caracteres Inválidos, Favor de introducir solo números");//manda la alerta negativa 
+				break;//rempe el siglo 
+			}
+		}
+	}
+
+	var texto, mayu1, ancho2;//nombro mis variables 
+	function asunto(){//declaro mi funcion 
+		texto=document.getElementById("textarea").value;//mando ha extrar mi cuandro de texto de asunto 
+		ancho2=texto.length;
+		mayu1=texto.toUpperCase();//
+		document.getElementById("textarea").value=mayu1;
+	}
+	var se;
+  var seg;
+	function segu(){
+    se=document.getElementById("txtseg").value;
+		seg=document.getElementById("txtse").value;
+    if(seg==se || seg=="")
+	{
+		}
+    else{
+      alert("Valor de seguridad incorrecta");
+	document.getElementById("txtse").value="";
+    }
+	}
+	
+	
+	
+	var nombre, mail, telefono, asunto, seguridad;
+	var nom, ema, tel,asu, seg, se;
+function mario(){
+	nombre=document.getElementById("txtnombre").value;
+	mail=document.getElementById("mail").value;
+  telefono=document.getElementById("txttel").value;
+  asunto=document.getElementById("textarea").value;
+  seguridad=document.getElementById("txtse").value;
+    se=document.getElementById("txtseg").value;
+    nom=nombre.length;
+    ema=mail.length;
+    tel=telefono.length;
+    asu=asunto.length;
+    seg=seguridad.length;
+if(se!=seguridad){ 
+alert("Valor de seguridad incorrecto");
+}else{
+if((nom==0) || (ema==0) || (tel==0) || (asu==0) || (seg==0))
+  {
+    alert("Introduzca todos los datos");
+  }
+  else{
+    alert("Mensaje enviado");
+    document.getElementById("txtnombre").value="";
+    document.getElementById("mail").value="";
+    document.getElementById("txttel").value="";
+    document.getElementById("textarea").value="";
+    document.getElementById("txtse").value="";
+  }
+}
+	}
+</script>
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+			<h1>Despacho Juridico<br>
+            ENCASDE<br>
+        </h1><img src="yo1.jpg" width="100%" height="1%"	>	
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Inicio</a></li>
+            <li><a href="#page3">Servicio</a></li>
+			<li><a href="#page4">Programador</a></li>
+            <li><a href="#page5">Contáctanos </a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Mario Delgado</h4>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quienes somos?</h1>
+	</div>
+	<div data-role="content">	
+		<center><h1> Nombre de la empresa <br></h1></center>
+   <center> <h1>~EMCASDE~</h1>	</center>
+  <h1> Nuestra misión<br></h1>
+   Somos la instancia de la Secretaría General que garantiza certeza y seguridad jurídica a los actos de la Universidad y sanciona las acciones de  gestión y gobernabilidad conforme la normatividad de la Red Universitaria.<br>
+		
+        <br>Somos un despachode Abogados con más de Quince Años de experiencia, que al paso de los años se ha adaptado a las nuevas exigencias del mercado.  
+
+Nuestro equipo tiene una visión integral y multidisciplinaria de nuestra actividad, ya que los problemas de nuestros clientes abarcan diversas ramas del derecho, sin olvidar que en la práctica profesional, la especialidad la impone el problema a resolver, que significa la ampliación del conocimiento jurídico.
+
+Los servicios que brindamos no se contraponen con los que ofrecen las grandes firmas de abogados. Queremos crecer, conforme a nuestros principios, lo que significa hacerlo con honestidad, sin menoscabar el servicio personalizado que ofrecemos actualmente. Nuestro compromiso es seguir cultivando la calidad, el profesionalismo, la cercanía en el trato y la especialización.<br>
+<h1><br>Visión <br></h1>En el 2030, mediante un proceso incluyente de revisión y adecuación de la normatividad universitaria y bajo los principios de eficiencia, eficacia, equidad, sencillez, transparencia y legalidad, tutelamos con normas pertinentes y actualizadas, la estructura jurídica y el sistema administrativo y de gestión de la Red Universitaria.<br>
+<h1><br>Valores<br></h1>1. Secreto profesional
+Privacidad. El secreto profesional está basado en la confianza máxima. Garantiza al cliente que su consulta es absolutamente confidencial.<br>
+2.Independencia 
+El buen abogado no se deja influenciar por terceros. Sólo vela por el interés del cliente. Los colegios de abogados velan por la independencia de los abogados.<br>
+3. Deontología
+Elbuen abogado actúa en el marco de unas normas éticas, protección añadida, que redunda en calidad, juego limpio. Ética personal y profesional que está controlada y puede ser sancionada por los colegiosde abogados, que velan por la buena práctica de la profesión.<br>
+4. Honestidad 
+El buen abogado dice la verdad. Es realista, objetivo en el asesoramiento. No engaña. El abogado informa con realismosobre los pros y contras para ayudar al cliente a tomar decisiones inteligentes. No crea falsas expectativas.<br>
+5. Puntualidad
+Es necesario en un estudiante de derecho para dotar la personalidadde carácter, orden y eficiencia. 
+6. Lealtad
+Es la llave que nos permite tener autentico éxito cuando nos relacionamos, no es un valor fácil de encontrar, es cual una persona siempre busca.<br>
+7.Justicia
+Es la virtud cardinal de retribuir a cada uno lo que por derecho le corresponde, es un ente ideal que causa satisfacción cuando creemos que la misma se cumplió y nos causa molestia cuandocreemos lo contrario.<br>
+8. Libertad 
+Puede ser entendida como un valor jurídico, fin al que el derecho debe proseguir o como un derecho subjetivo. Ambos planos son dos facetas de un mismo concepto,pues ha de ser un fin a perseguir por el derecho porque pertenece a la esencia del derecho proteger u defender la libertad humana.<br> 
+ 		<center><img src="el2.jpg" width="50%" height="2%"></center>			
+	</div>
+	<div data-role="footer">
+		<h4>Mario Delgado</h4>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Servicios Generales</h1>
+	</div>
+	<div data-role="content">	
+			<center><h1>Asesorías Jurídicas</h1><br> </center>
+        <img src="20.jpg" width="23%" height="2%" ><img src="4.jpg" width="20%" height="2%" ><img src="1.jpg" width="20%" height="2%" ><img src="5.jpg" width="15%" height="2%" ><img src="7.jpg" width="22%" height="2%" ><br>
+ 
+- Consultoría Jurídica<br>
+
+- Asesoría Jurídica<br> 
+
+- Elaboración, revisión y dictamen de instrumentos legales<br> 
+
+- Auditoría Legal<br> 
+
+- Recuperación de Cartera<br> 
+
+- Investigación Para Autorización de Créditos<br> 
+
+- Dictamen Preventivo<br> 
+
+- Gestiones Migratorias<br>  
+
+- Asesoría a Consejeros Independientes<br> 
+
+- Consultoría a Contraloría Normativa<br> 
+
+- Cobertura Nacional en la República Mexicana.<br> 
+
+- Capacitación Jurídica Sobre Cualquier Materia.<br> 
+
+- Localización e Investigación de Personas y Empresas.<br> 
+
+- Boletín Informativo.<br> 
+
+- Trámites ante el Registro Público de la Propiedad en toda la República.<br> 
+
+- Trámites ante el Registro Civil en toda la República. 	
+	</div>
+	<div data-role="footer">
+		<h4>Mario Delgado.</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">	
+    <table width="0" border="0">
+  <tr>
+    <td><img src="mario.jpg" width="40%" height="20%"></td>
+    <td><h1>~ Mario Delgado Garcia ~</h1>
+    Tengo 17 años estudio en Centro de bachillerato tecnológico industrial y de servicio #184 en la especialidad de programación. </td>
+  </tr>
+  <tr>
+    <td><img src="542.jpg" width="40%" height="30%"></td>
+    <td><h1> ~ Estela Carreon Rodriguez ~</h1>Tengo 16 años estudio en Centro de bachillerato tecnológico industrial y de servicio #184 en la especialidad de programación.</td>
+  </tr>
+</table>
+
+      
+	</div>
+	<div data-role="footer">
+		<h4>Mario Delgado</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos </h1>
+	</div>
+	<div data-role="content">	
+
+<table width="0" border="0">
+  <tr>
+    <td><label for="textinput">Nombre</label></td>
+    <td><input type="text" name="txtnombre" id="txtnombre" value=""  /  onBlur="lol()"></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">E-Mail:</label></td>
+    <td><input type="text" name="mail" id="mail" value=""  / onBlur="email()"></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Teléfono:</label></td>
+    <td><input type="text" name="txttel" id="txttel" value="" onBlur="Telefono()" /></td>
+  </tr>
+  .
+  
+  <tr>
+    <td>Seguridad</td>
+    <td><input type="text" name="txtseg" id="txtseg" value="Hola mundo" disabled="disabled" />
+    <input type="text" name="txtse" id="txtse" value=""  onBlur="seguridad()" />
+    </tr>
+    <tr>
+    <td colspan="2"><button onClick="mario()">Aceptar</button></td>
+  </tr>
+</table>
+
+<img src="croquis.png" width="30%" height="2%">	<br>
+<center>
+Encuéntranos  plaza de la constitución colonia centro<br>
+A 100 metros de  las oficinas de ministerio público junto la oficina de Ajuria Galiaci.
+</center>
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div
+></div>
+
+</body>
+</html>
